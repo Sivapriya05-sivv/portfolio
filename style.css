@@ -1,0 +1,352 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+:root {
+    --bg-matte-black: #121212; 
+    --bg-card-dark: #1a1a1a;    
+    --accent-color: #ffffff;     
+    --text-primary: #ffffff;
+    --text-muted: #888888;
+}
+
+body {
+    background-color:var(--bg-matte-black); 
+    color: var(--text-primary);
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    background-color: var(--bg-matte-black);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color:var(--text-primary);
+}
+
+.logo-icon {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color:var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+
+
+
+
+.btn-contact {
+    display: inline-block;
+    background-color: #00ff88;
+    color: #111111;
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #00cc6e;
+}
+
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.image-placeholder {
+    width: 300px;
+    height: 500px;
+    background-color: #222222;
+    border-radius: 8px;
+    opacity: 0.6;
+}
+
+
+.hero-info {
+    display: flex;
+    background-color: #161616;
+    padding: 2rem 4rem;
+    gap: 4rem;
+    border-top: 1px solid #222222;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-label {
+    font-size: 0.8rem;
+    color: #d18e08;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-value {
+    font-size: 0.95rem;
+    color: #edeaea;
+}
+
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-image {
+        display: none; 
+    }
+    .hero-info {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+    .navbar {
+        padding: 1rem;
+    }
+    .nav-links {
+        display: none; 
+    }
+}
+
+.about-section {
+    padding: 6rem 4rem;
+    background-color: var(--bg-matte-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container {
+    display: grid;
+    
+    grid-template-columns: 1fr 1.2fr; 
+    gap: 4rem;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+}
+
+
+.about-image-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-img-placeholder {
+    width: 100%;
+    max-width: 400px;
+    height: 450px;
+    background-color: #1a1a1a;
+    border: 1px solid #252525;
+    border-radius: 8px;
+}
+
+
+.about-content-box {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+.about-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+
+.detail-card {
+    background-color: var(--bg-card-dark);
+    padding: 1.2rem;
+    border-radius: 6px;
+    border-left: 3px solid #00ff88; 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-value {
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+
+.btn-download {
+    align-self: flex-start;
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 2px solid #ffffff;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+
+@media (max-width: 968px) {
+    .about-container {
+        grid-template-columns: 1fr; 
+        gap: 3rem;
+    }
+
+    .about-section {
+        padding: 4rem 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .about-img-placeholder {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-details-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+.skills-section {
+    padding: 6rem 4rem;
+    background-color: var(--bg-matte-black);
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+
+.skill-card {
+    background-color: var(--bg-card-dark);
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    border: 1px solid #222222;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #00ff88; 
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.skill-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+}
+
+.skill-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* RESPONSIVE DESIGN ADJUSTMENTS */
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 4rem 2rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr; /* 1 column grid on mobile devices */
+        gap: 1.5rem;
+    }
+    
+    .skill-card {
+        padding: 2rem 1.5rem;
+    }
+}
