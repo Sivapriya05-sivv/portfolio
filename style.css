@@ -24,7 +24,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 4rem;
-    background-color: var(--bg-matte-black);
+    background-color: #13120E;
     position: fixed;
     width: 100%;
     top: 0;
@@ -51,15 +51,11 @@ body {
     gap: 2rem;
 }
 
-.nav-links a {
-    color:var(--text-muted);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s;
-}
 
 .nav-links a:hover {
+
     color: var(--accent-color);
+    box-shadow: #13120E;
 }
 
 .container {
@@ -328,21 +324,13 @@ body {
     margin-bottom: 0.8rem;
     color: var(--text-primary);
 }
-
-.skill-card p {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-}
-
-/* RESPONSIVE DESIGN ADJUSTMENTS */
 @media (max-width: 768px) {
     .skills-section {
         padding: 4rem 2rem;
     }
     
     .skills-grid {
-        grid-template-columns: 1fr; /* 1 column grid on mobile devices */
+        grid-template-columns: 1fr; 
         gap: 1.5rem;
     }
     
